@@ -5,14 +5,14 @@
 ```js
  //例子1
 function debounce(fn,delay=200){
-	let timer = null;
-	return function(){
-		if(timer) clearTimeout(timer);
-		timer = setTimeout(()=>{
-			fn.apply(this,arguments);
-			timer = null;
-		},delay);
-	}
+    let timer = null;
+    return function(){
+        if(timer) clearTimeout(timer);
+        timer = setTimeout(()=>{
+            fn.apply(this,arguments);
+            timer = null;
+        },delay);
+    }
 }
 //例子2
 function debounce(func, wait) {
@@ -26,7 +26,7 @@ function debounce(func, wait) {
             }, wait);
         }
 }
- 
+
  //精简版
 let time2;
 document.getElementById('防抖').onclick = function () {
@@ -81,9 +81,7 @@ document.getElementById('节流').onclick = function () {
         },2000)
     }
 }
-
 ```
 
-  
 
 
