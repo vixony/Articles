@@ -1,0 +1,45 @@
+{
+    "name": "frontend-commit-template",
+    "version": "1.0.2",
+    "description": "前端代码风格及commit风格规范化模板",
+    "main": "index.js",
+    "scripts": {
+        "commit": "git-cz",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/NUCOSC/frontend-commit-template.git"
+    },
+    "author": "HerbertHe<Herbert.He0229@gmail.com>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/NUCOSC/frontend-commit-template/issues"
+    },
+    "homepage": "https://github.com/NUCOSC/frontend-commit-template#readme",
+    "devDependencies": {
+        "@commitlint/cli": "^9.1.2",
+        "@typescript-eslint/eslint-plugin": "^3.9.0",
+        "@typescript-eslint/parser": "^3.9.0",
+        "commitlint-config-cz": "^0.13.1",
+        "cz-customizable": "^6.3.0",
+        "eslint": "^7.7.0",
+        "eslint-config-prettier": "^6.11.0",
+        "eslint-plugin-react": "^7.20.6",
+        "husky": "^4.2.5",
+        "lint-staged": "^10.2.11",
+        "prettier": "^2.0.5"
+    },
+    "config": {
+        "commitizen": {
+            "path": "node_modules/cz-customizable"
+        }
+    },
+    "husky": {
+        "hooks": {
+            "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+            "pre-add": "lint-staged"
+        }
+    },
+    "lint-staged": {}
+}
